@@ -392,7 +392,7 @@ class bulk_downloader:
                     download_file = possible_filename.pop()
 
             # Open our local file for writing and build status bar
-            tf = tempfile.NamedTemporaryFile(mode='w+b', delete=False, dir='../..')
+            tf = tempfile.NamedTemporaryFile(mode='w+b', delete=False, dir='/tmp')
             self.chunk_read(response, tf, report_hook=self.chunk_report)
 
             # Reset download status
