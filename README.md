@@ -25,7 +25,7 @@ Coverage of the ASF data
 ![](notebooks/images/ASF_coverage.png)
 
 Interferogram of the Pico do Fogo volcano eruption 2014
-![](notebooks/images/3D Interferogram.png)
+![](notebooks/images/3D_Interferogram.png)
 
 Unsucessfull mapping of the Twhaites Glacier.
 ![](notebooks/images/TwhaitesGlacier.png)
