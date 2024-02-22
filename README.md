@@ -9,6 +9,12 @@ docker run -v ./notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787
 
 ```
 
+Get the token from the logs:
+```bash
+docker logs pygmtsar
+```
+
+
 ```bash
 docker run -v /home/christian/hnee/playground/gmtsar/notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787 --restart always --name pygmtsar docker.io/pechnikov/pygmtsar 
 ```
@@ -19,7 +25,7 @@ Coverage of the ASF data
 ![](notebooks/images/ASF_coverage.png)
 
 Interferogram of the Pico do Fogo volcano eruption 2014
-![](notebooks/images/3D Interferogram.png)
+![](notebooks/images/3D_Interferogram.png)
 
 Unsucessfull mapping of the Twhaites Glacier.
 ![](notebooks/images/TwhaitesGlacier.png)
