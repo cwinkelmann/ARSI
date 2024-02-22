@@ -9,6 +9,12 @@ docker run -v ./notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787
 
 ```
 
+Get the token from the logs:
+```bash
+docker logs pygmtsar
+```
+
+
 ```bash
 docker run -v /home/christian/hnee/playground/gmtsar/notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787 --restart always --name pygmtsar docker.io/pechnikov/pygmtsar 
 ```
