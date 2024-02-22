@@ -4,10 +4,15 @@ import zipfile
 
 
 def extract(source_dir, destination_dir):
-
+    """
+    Extracts all the files in the source directory and moves them to the destination directory.
+    """
     # Ensure the destination folder exists
     if not os.path.exists(destination_dir):
         os.makedirs(destination_dir)
+
+    if not os.path.exists(source_dir):
+        raise Exception(f"source_dir directory {source_dir} does not exists.")
 
     # Loop through all files in the source directory
     for filename in os.listdir(source_dir):

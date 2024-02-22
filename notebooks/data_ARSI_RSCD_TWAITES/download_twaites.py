@@ -66,23 +66,25 @@ def signal_handler(sig, frame):
 class bulk_downloader:
     def __init__(self):
         # List of files to download
-        self.files = [ "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210308T082926_20210308T082953_036904_045743_2075.zip",
+        self.files = [
+            "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210308T082926_20210308T082953_036904_045743_2075.zip",
                        "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210320T082926_20210320T082953_037079_045D60_4C31.zip",
                        "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210401T082926_20210401T082953_037254_046368_3193.zip",
                        "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210413T082926_20210413T082953_037429_046976_769A.zip",
                        "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210425T082927_20210425T082954_037604_046F80_3BE0.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210507T082928_20210507T082955_037779_04757A_ECFB.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210519T082928_20210519T082955_037954_047AC6_8163.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210531T082929_20210531T082956_038129_048006_1A86.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210612T082930_20210612T082957_038304_048536_D749.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210624T082930_20210624T082957_038479_048A6D_16B3.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210718T082932_20210718T082959_038829_0494F3_E530.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210706T082931_20210706T082958_038654_048FB4_0455.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210823T082934_20210823T083001_039354_04A5E6_1AE6.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210904T082934_20210904T083001_039529_04ABE9_CC9D.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210916T082935_20210916T083002_039704_04B1E2_AF2F.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210730T082932_20210730T082959_039004_049A26_50E4.zip",
-                       "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210928T082935_20210928T083002_039879_04B7E5_B88A.zip" ]
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210507T082928_20210507T082955_037779_04757A_ECFB.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210519T082928_20210519T082955_037954_047AC6_8163.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210531T082929_20210531T082956_038129_048006_1A86.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210612T082930_20210612T082957_038304_048536_D749.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210624T082930_20210624T082957_038479_048A6D_16B3.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210718T082932_20210718T082959_038829_0494F3_E530.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210706T082931_20210706T082958_038654_048FB4_0455.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210823T082934_20210823T083001_039354_04A5E6_1AE6.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210904T082934_20210904T083001_039529_04ABE9_CC9D.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210916T082935_20210916T083002_039704_04B1E2_AF2F.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210730T082932_20210730T082959_039004_049A26_50E4.zip",
+                       # "https://datapool.asf.alaska.edu/SLC/SA/S1A_IW_SLC__1SSH_20210928T082935_20210928T083002_039879_04B7E5_B88A.zip"
+                       ]
 
         # Local stash of cookies so we don't always have to ask
         self.cookie_jar_path = os.path.join(
