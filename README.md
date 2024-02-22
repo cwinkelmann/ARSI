@@ -2,7 +2,7 @@
 
 ## To run this you need Docker. Otherwise the installation of the dependencies is a bit tricky.
 
-[](https://docs.docker.com/engine/install/)
+[Install Docker](https://docs.docker.com/engine/install/)
 
 ```bash
 docker run -v ./notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787 --restart always --name pygmtsar docker.io/pechnikov/pygmtsar 
