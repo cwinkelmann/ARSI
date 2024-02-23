@@ -4,6 +4,7 @@
 
 [Install Docker](https://docs.docker.com/engine/install/)
 
+Start the container with the following command:
 ```bash
 docker run -v ./notebooks:/home/jovyan/notebooks -it -dp 8888:8888 -dp 8787:8787 --restart always --name pygmtsar docker.io/pechnikov/pygmtsar 
 ```
